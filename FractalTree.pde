@@ -1,18 +1,18 @@
-private double fractionLength = 0.5; 
-private int lBranch = 5; 
-private double bAngle = 0.30;  
+private double fractionLength = 0.8; 
+private int lBranch = 6; 
+private double bAngle = 0.60;  
 public void setup() 
 {   
-  size ( 400, 400 );    
+  size ( 600, 600 );    
   noLoop(); 
 } 
 public void draw() 
 { 
   background ( 255, 255, 255 );
   strokeWeight ( 1 );
-  stroke ( ( int )( Math.random() * 256 ), ( int )( Math.random() * 256 ), ( int )( Math.random() * 256 ) );   
-  line ( 200, 200, 200, 300 );   
-  drawBranches ( 200, 200, 100, 3 * Math.PI/2 );
+  stroke ( 150, 10, 10 );   
+  line ( 300, 500, 300, 600 );   
+  drawBranches ( 300, 500, 300, 3 * Math.PI/2 );
 } 
 public void drawBranches ( int x, int y, double branchLength, double angle ) 
 {   
@@ -30,7 +30,7 @@ public void drawBranches ( int x, int y, double branchLength, double angle )
   line ( x, y, endX2, endY2 );
   if ( branchLength > lBranch )
   {
-    stroke ( ( int )( Math.random() * 256 ), ( int )( Math.random() * 256 ), ( int )( Math.random() * 256 ) );   
+    stroke ( 150, 10, 10 );   
     drawBranches ( endX1, endY1, branchLength, angle1 );
     drawBranches ( endX2, endY2, branchLength, angle2 );
   }
